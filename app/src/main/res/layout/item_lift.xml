@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/whole_item"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/LL"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:onClick="onClick">
+
+        <TextView
+            android:id="@+id/liftName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/liftWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/liftPassBut"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pass" />
+    <Button
+        android:id="@+id/liftFailBut"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fail" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ex1Desc"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:textColor="@color/black"
+        android:text="Dummy Text"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp" />
+    </RelativeLayout>
+</LinearLayout>

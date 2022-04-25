@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <!--Edit text to enter course name-->
+        <EditText
+            android:id="@+id/idEdtExName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter Excercise Name" />
+
+        <!--edit text to enter course duration-->
+        <EditText
+            android:id="@+id/idEdtExWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter Starting Weight" />
+
+        <!--edit text to display course tracks-->
+        <EditText
+            android:id="@+id/idEdtExInc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter Increment" />
+
+        <!--button for adding new course-->
+        <Button
+            android:id="@+id/idBtnAddEx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Add Excercise"
+            android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/rButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Return"/>
+    </LinearLayout>
