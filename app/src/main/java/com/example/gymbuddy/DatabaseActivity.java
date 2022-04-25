@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class databaseActivity extends AppCompatActivity {
+public class DatabaseActivity extends AppCompatActivity {
 
     Button rButton;
     // creating variables for our edittext, button and dbhandler
@@ -29,7 +29,7 @@ public class databaseActivity extends AppCompatActivity {
             rButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent switchActivityIntent = new Intent(databaseActivity.this, MainActivity.class);
+                    Intent switchActivityIntent = new Intent(DatabaseActivity.this, MainActivity.class);
                     startActivity(switchActivityIntent);
                 }
             });
@@ -43,7 +43,7 @@ public class databaseActivity extends AppCompatActivity {
 
                     // creating a new dbhandler class
                     // and passing our context to it.
-                    dbHandler = new DBHandler(databaseActivity.this);
+                    dbHandler = new DBHandler(DatabaseActivity.this);
 
                     // below line is to add on click listener for our add course button.
                     addExBtn.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class databaseActivity extends AppCompatActivity {
 
                             // validating if the text fields are empty or not.
                             if (exName.isEmpty() && exWeight.isEmpty() && exInc.isEmpty()) {
-                                Toast.makeText(databaseActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DatabaseActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                                 return;
                             }
 
@@ -66,7 +66,7 @@ public class databaseActivity extends AppCompatActivity {
                             dbHandler.addNewCourse(exName, exWeight,exInc );
 
                             // after adding the data we are displaying a toast message.
-                            Toast.makeText(databaseActivity.this, "Excercise has been added.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DatabaseActivity.this, "Excercise has been added.", Toast.LENGTH_SHORT).show();
                             exNameEdt.setText("");
                             exIncEdt.setText("");
                             exWeightEdt.setText("");

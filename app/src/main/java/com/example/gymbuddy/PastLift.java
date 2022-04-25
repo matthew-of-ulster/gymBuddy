@@ -2,12 +2,12 @@ package com.example.gymbuddy;
 
 import java.text.SimpleDateFormat;
 
-public class past_lift {
+public class PastLift {
     boolean successful;
     String dateAttempted;
     double weight;
 
-    public past_lift(boolean successful, double weight) {
+    public PastLift(boolean successful, double weight) {
         this.successful = successful;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String date = sdf.format(System.currentTimeMillis());

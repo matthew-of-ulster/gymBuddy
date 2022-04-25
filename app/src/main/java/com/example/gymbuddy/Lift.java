@@ -9,7 +9,7 @@ public class Lift {
     //how many weeks before it loops
     int rWeek;
     String active_days;
-    ArrayList<past_lift>  past_lifts = new ArrayList<>();
+    ArrayList<PastLift>  past_lifts = new ArrayList<>();
     boolean visible;
 
     public Lift(String name, double weight, double increment, int rWeek, String active_days,boolean visible) {

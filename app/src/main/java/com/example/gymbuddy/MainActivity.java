@@ -2,21 +2,13 @@ package com.example.gymbuddy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.animation.Animator;
-import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -83,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Lift> arrayOfLifts = new ArrayList<>();
-        ArrayList<past_lift> arrayOfPastLift = new ArrayList<>();
+        ArrayList<PastLift> arrayOfPastLift = new ArrayList<>();
 
         fromDBArrayList.get(1).visible=false;
 
@@ -117,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ETN20 = ET20.getText().toString();
 
-                Intent switchActivityIntent = new Intent(MainActivity.this, databaseActivity.class);
+                Intent switchActivityIntent = new Intent(MainActivity.this, DatabaseActivity.class);
                 startActivity(switchActivityIntent);
             }
         });

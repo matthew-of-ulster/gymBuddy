@@ -96,7 +96,7 @@ public class LiftAdapter extends ArrayAdapter<Lift> {
             @Override
             public void onClick(View view) {
                 Double weight = Double.parseDouble(liftWeight.getText().toString());
-                lift.past_lifts.add(new past_lift(false,weight));
+                lift.past_lifts.add(new PastLift(false,weight));
 
             }
         });
