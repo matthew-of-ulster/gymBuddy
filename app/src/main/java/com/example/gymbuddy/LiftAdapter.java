@@ -3,6 +3,7 @@ package com.example.gymbuddy;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,9 +96,15 @@ public class LiftAdapter extends ArrayAdapter<Lift> {
         failBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Double weight = Double.parseDouble(liftWeight.getText().toString());
-                lift.past_lifts.add(new PastLift(false,weight));
+                lift.weight = Double.parseDouble(liftWeight.getText().toString());
+                lift.past_lifts.add(new PastLift(false,lift.weight));
+                Intent intent = new Intent(getContext(), EditExcercise.class);
 
+                intent.putExtra("name",lift.name);
+                intent.putExtra("weight",lift.weight);
+                intent.putExtra("inc",lift.increment);
+
+                getContext().startActivity(intent);
             }
         });
 

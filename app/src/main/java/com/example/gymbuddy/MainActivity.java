@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Lift> arrayOfLifts = new ArrayList<>();
         ArrayList<PastLift> arrayOfPastLift = new ArrayList<>();
 
-        fromDBArrayList.get(1).visible=false;
 
         for(int i =0;i<fromDBArrayList.size();i++){
             if(fromDBArrayList.get(i).visible) {
